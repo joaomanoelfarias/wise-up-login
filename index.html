@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Wise Up</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="./images/logo.svg" class="img-logo" alt="Logo Wise Up">
+
+        <div class="form">
+            <form action="#">
+                <div class="form">
+                    <div class="form-input">   
+                        <span class="span-text-label">Login</span>
+                        <label for="login"></label>
+                        <input class="input" type="email" name="login" id="login" placeholder="Insira seu email">
+                    </div>
+                    
+                    <div class="form-input">
+                        <span class="span-text-label">Senha</span>
+                        <label for="password"></label>
+                        <input class="input" type="password" name="password" id="password" placeholder="Insira sua senha">
+                    </div>
+
+                    <a class="forget-password"href="#">Esqueceu sua senha?</a>
+
+                    <button type="submit">Login</button>
+
+                    <p>Ou</p>
+
+                    <div class="icon">
+                        <a href="#"><span class="span-icon"><img src="./images/google.png" alt="Logotipo da Google"></span></a>
+                        <a href="#"><span class="span-icon"><img src="./images/facebook.png" alt="Logotipo do Facebook"></span></a>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <a class="register" href="#">Não tem login? <span>Cadastre-se</span> <img src="./images/icons-maior.png" alt="Icone sinal de maior"></a>     
+        <hr class="line-end">    
+
+        
+        <div class="app-download">
+            <p>Estude pelo Celular. Baixe agora o App.</p>
+            <a href="#"><img src="./images/play-store.svg" alt="Play Store"></a>
+            <a href="#"><img src="./images/app-store.svg" alt="App Store"></a>
+        </div>
+
+        
+        
+        <a class="help" href="#">Central de ajuda <img src="./images/icon-arrow.svg" alt="Icone sinal de maior"> </a>
+        
+    </div>
+
+    <script>
+        const inputs = document.querySelectorAll('.input');
+
+        inputs.forEach(input => {
+            input.addEventListener('focus', function() {
+                input.parentNode.classList.add('form-input-focus');
+            })
+        })
+
+        inputs.forEach(input => {
+            input.addEventListener('blur', function() {
+                input.parentNode.classList.remove('form-input-focus');
+            })
+        })
+    </script>
+</body>
+</html>
